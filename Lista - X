@@ -1,0 +1,890 @@
+class Pessoa {
+    private String nome;
+    private int idade;
+    private String cpf;
+    private String email;
+    
+    public Pessoa() {
+    }
+    
+    public Pessoa(String nome, int idade, String cpf, String email) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.email = email;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public int getIdade() {
+        return idade;
+    }
+    
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    
+    public String getCpf() {
+        return cpf;
+    }
+    
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public void andar() {
+        System.out.println(nome + " está andando.");
+    }
+    
+    public void comer() {
+        System.out.println(nome + " está comendo.");
+    }
+    
+    public void dormir() {
+        System.out.println(nome + " está dormindo.");
+    }
+    
+    public void falar() {
+        System.out.println(nome + " está falando.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Pessoa{nome='" + nome + "', idade=" + idade + ", cpf='" + cpf + "', email='" + email + "'}";
+    }
+}
+
+class Animal {
+    private String nome;
+    private String especie;
+    private int idade;
+    private double peso;
+    
+    public Animal() {
+    }
+    
+    public Animal(String nome, String especie, int idade, double peso) {
+        this.nome = nome;
+        this.especie = especie;
+        this.idade = idade;
+        this.peso = peso;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public String getEspecie() {
+        return especie;
+    }
+    
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+    
+    public int getIdade() {
+        return idade;
+    }
+    
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    
+    public double getPeso() {
+        return peso;
+    }
+    
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+    
+    public void comer() {
+        System.out.println(nome + " está comendo.");
+    }
+    
+    public void dormir() {
+        System.out.println(nome + " está dormindo.");
+    }
+    
+    public void emitirSom() {
+        System.out.println(nome + " está emitindo som.");
+    }
+    
+    public void mover() {
+        System.out.println(nome + " está se movendo.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Animal{nome='" + nome + "', especie='" + especie + "', idade=" + idade + ", peso=" + peso + "}";
+    }
+}
+
+class Carro {
+    private String marca;
+    private String modelo;
+    private int ano;
+    private String cor;
+    private int velocidade;
+    
+    public Carro() {
+        this.velocidade = 0;
+    }
+    
+    public Carro(String marca, String modelo, int ano, String cor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+        this.velocidade = 0;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public String getModelo() {
+        return modelo;
+    }
+    
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    
+    public int getAno() {
+        return ano;
+    }
+    
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
+    public int getVelocidade() {
+        return velocidade;
+    }
+    
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+    
+    public void ligar() {
+        System.out.println("Carro " + modelo + " ligado.");
+    }
+    
+    public void desligar() {
+        System.out.println("Carro " + modelo + " desligado.");
+        this.velocidade = 0;
+    }
+    
+    public void acelerar() {
+        this.velocidade += 10;
+        System.out.println("Carro acelerou. Velocidade: " + velocidade + " km/h");
+    }
+    
+    public void frear() {
+        this.velocidade = Math.max(0, this.velocidade - 10);
+        System.out.println("Carro freou. Velocidade: " + velocidade + " km/h");
+    }
+    
+    @Override
+    public String toString() {
+        return "Carro{marca='" + marca + "', modelo='" + modelo + "', ano=" + ano + ", cor='" + cor + "', velocidade=" + velocidade + "}";
+    }
+}
+
+class Livro {
+    private String titulo;
+    private String autor;
+    private int numeroPaginas;
+    private int paginaAtual;
+    
+    public Livro() {
+        this.paginaAtual = 0;
+    }
+    
+    public Livro(String titulo, String autor, int numeroPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
+        this.paginaAtual = 0;
+    }
+    
+    public String getTitulo() {
+        return titulo;
+    }
+    
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    public String getAutor() {
+        return autor;
+    }
+    
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+    
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }
+    
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+    
+    public int getPaginaAtual() {
+        return paginaAtual;
+    }
+    
+    public void setPaginaAtual(int paginaAtual) {
+        this.paginaAtual = paginaAtual;
+    }
+    
+    public void abrir() {
+        System.out.println("Livro '" + titulo + "' foi aberto.");
+    }
+    
+    public void fechar() {
+        System.out.println("Livro '" + titulo + "' foi fechado.");
+    }
+    
+    public void virarPagina() {
+        if (paginaAtual < numeroPaginas) {
+            paginaAtual++;
+            System.out.println("Página virada. Página atual: " + paginaAtual);
+        } else {
+            System.out.println("Já está na última página.");
+        }
+    }
+    
+    public void marcarPagina() {
+        System.out.println("Página " + paginaAtual + " foi marcada.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Livro{titulo='" + titulo + "', autor='" + autor + "', numeroPaginas=" + numeroPaginas + ", paginaAtual=" + paginaAtual + "}";
+    }
+}
+
+class Televisao {
+    private String marca;
+    private int tamanho;
+    private int canal;
+    private int volume;
+    private boolean estado;
+    
+    public Televisao() {
+        this.canal = 1;
+        this.volume = 10;
+        this.estado = false;
+    }
+    
+    public Televisao(String marca, int tamanho) {
+        this.marca = marca;
+        this.tamanho = tamanho;
+        this.canal = 1;
+        this.volume = 10;
+        this.estado = false;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public int getTamanho() {
+        return tamanho;
+    }
+    
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+    
+    public int getCanal() {
+        return canal;
+    }
+    
+    public void setCanal(int canal) {
+        this.canal = canal;
+    }
+    
+    public int getVolume() {
+        return volume;
+    }
+    
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+    
+    public boolean isEstado() {
+        return estado;
+    }
+    
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
+    public void ligar() {
+        this.estado = true;
+        System.out.println("TV ligada.");
+    }
+    
+    public void desligar() {
+        this.estado = false;
+        System.out.println("TV desligada.");
+    }
+    
+    public void mudarCanal() {
+        if (estado) {
+            this.canal++;
+            System.out.println("Canal alterado para: " + canal);
+        } else {
+            System.out.println("TV está desligada.");
+        }
+    }
+    
+    public void aumentarVolume() {
+        if (estado && volume < 100) {
+            this.volume++;
+            System.out.println("Volume aumentado para: " + volume);
+        }
+    }
+    
+    public void diminuirVolume() {
+        if (estado && volume > 0) {
+            this.volume--;
+            System.out.println("Volume diminuído para: " + volume);
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return "Televisao{marca='" + marca + "', tamanho=" + tamanho + ", canal=" + canal + ", volume=" + volume + ", estado=" + estado + "}";
+    }
+}
+
+class Celular {
+    private String marca;
+    private String modelo;
+    private String numero;
+    private int bateria;
+    private boolean estado;
+    
+    public Celular() {
+        this.bateria = 100;
+        this.estado = false;
+    }
+    
+    public Celular(String marca, String modelo, String numero) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numero = numero;
+        this.bateria = 100;
+        this.estado = false;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public String getModelo() {
+        return modelo;
+    }
+    
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    
+    public String getNumero() {
+        return numero;
+    }
+    
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+    
+    public int getBateria() {
+        return bateria;
+    }
+    
+    public void setBateria(int bateria) {
+        this.bateria = bateria;
+    }
+    
+    public boolean isEstado() {
+        return estado;
+    }
+    
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
+    public void ligar() {
+        if (bateria > 0) {
+            this.estado = true;
+            System.out.println("Celular ligado.");
+        } else {
+            System.out.println("Bateria vazia.");
+        }
+    }
+    
+    public void desligar() {
+        this.estado = false;
+        System.out.println("Celular desligado.");
+    }
+    
+    public void fazerChamada() {
+        if (estado && bateria > 10) {
+            this.bateria -= 5;
+            System.out.println("Fazendo chamada. Bateria: " + bateria + "%");
+        } else {
+            System.out.println("Celular desligado ou bateria baixa.");
+        }
+    }
+    
+    public void enviarMensagem() {
+        if (estado && bateria > 5) {
+            this.bateria -= 2;
+            System.out.println("Mensagem enviada. Bateria: " + bateria + "%");
+        } else {
+            System.out.println("Celular desligado ou bateria baixa.");
+        }
+    }
+    
+    public void carregar() {
+        this.bateria = 100;
+        System.out.println("Celular carregado.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Celular{marca='" + marca + "', modelo='" + modelo + "', numero='" + numero + "', bateria=" + bateria + ", estado=" + estado + "}";
+    }
+}
+
+class Casa {
+    private String endereco;
+    private int numeroComodos;
+    private double area;
+    private String cor;
+    
+    public Casa() {
+    }
+    
+    public Casa(String endereco, int numeroComodos, double area, String cor) {
+        this.endereco = endereco;
+        this.numeroComodos = numeroComodos;
+        this.area = area;
+        this.cor = cor;
+    }
+    
+    public String getEndereco() {
+        return endereco;
+    }
+    
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+    
+    public int getNumeroComodos() {
+        return numeroComodos;
+    }
+    
+    public void setNumeroComodos(int numeroComodos) {
+        this.numeroComodos = numeroComodos;
+    }
+    
+    public double getArea() {
+        return area;
+    }
+    
+    public void setArea(double area) {
+        this.area = area;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
+    public void abrirPorta() {
+        System.out.println("Porta da casa foi aberta.");
+    }
+    
+    public void fecharPorta() {
+        System.out.println("Porta da casa foi fechada.");
+    }
+    
+    public void ligarLuz() {
+        System.out.println("Luz da casa foi ligada.");
+    }
+    
+    public void desligarLuz() {
+        System.out.println("Luz da casa foi desligada.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Casa{endereco='" + endereco + "', numeroComodos=" + numeroComodos + ", area=" + area + ", cor='" + cor + "'}";
+    }
+}
+
+class Computador {
+    private String marca;
+    private String processador;
+    private int memoriaRAM;
+    private int armazenamento;
+    
+    public Computador() {
+    }
+    
+    public Computador(String marca, String processador, int memoriaRAM, int armazenamento) {
+        this.marca = marca;
+        this.processador = processador;
+        this.memoriaRAM = memoriaRAM;
+        this.armazenamento = armazenamento;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public String getProcessador() {
+        return processador;
+    }
+    
+    public void setProcessador(String processador) {
+        this.processador = processador;
+    }
+    
+    public int getMemoriaRAM() {
+        return memoriaRAM;
+    }
+    
+    public void setMemoriaRAM(int memoriaRAM) {
+        this.memoriaRAM = memoriaRAM;
+    }
+    
+    public int getArmazenamento() {
+        return armazenamento;
+    }
+    
+    public void setArmazenamento(int armazenamento) {
+        this.armazenamento = armazenamento;
+    }
+    
+    public void ligar() {
+        System.out.println("Computador ligado.");
+    }
+    
+    public void desligar() {
+        System.out.println("Computador desligado.");
+    }
+    
+    public void executarPrograma() {
+        System.out.println("Programa executado.");
+    }
+    
+    public void salvarArquivo() {
+        System.out.println("Arquivo salvo.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Computador{marca='" + marca + "', processador='" + processador + "', memoriaRAM=" + memoriaRAM + ", armazenamento=" + armazenamento + "}";
+    }
+}
+
+class Bicicleta {
+    private String marca;
+    private String cor;
+    private int numeroMarchas;
+    private int tamanhoAro;
+    
+    public Bicicleta() {
+    }
+    
+    public Bicicleta(String marca, String cor, int numeroMarchas, int tamanhoAro) {
+        this.marca = marca;
+        this.cor = cor;
+        this.numeroMarchas = numeroMarchas;
+        this.tamanhoAro = tamanhoAro;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
+    public int getNumeroMarchas() {
+        return numeroMarchas;
+    }
+    
+    public void setNumeroMarchas(int numeroMarchas) {
+        this.numeroMarchas = numeroMarchas;
+    }
+    
+    public int getTamanhoAro() {
+        return tamanhoAro;
+    }
+    
+    public void setTamanhoAro(int tamanhoAro) {
+        this.tamanhoAro = tamanhoAro;
+    }
+    
+    public void pedalar() {
+        System.out.println("Pedalando a bicicleta.");
+    }
+    
+    public void frear() {
+        System.out.println("Bicicleta freada.");
+    }
+    
+    public void trocarMarcha() {
+        System.out.println("Marcha trocada.");
+    }
+    
+    public void dobrar() {
+        System.out.println("Bicicleta dobrada.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Bicicleta{marca='" + marca + "', cor='" + cor + "', numeroMarchas=" + numeroMarchas + ", tamanhoAro=" + tamanhoAro + "}";
+    }
+}
+
+class Geladeira {
+    private String marca;
+    private int capacidade;
+    private int temperatura;
+    private String cor;
+    
+    public Geladeira() {
+        this.temperatura = 5;
+    }
+    
+    public Geladeira(String marca, int capacidade, String cor) {
+        this.marca = marca;
+        this.capacidade = capacidade;
+        this.cor = cor;
+        this.temperatura = 5;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public int getCapacidade() {
+        return capacidade;
+    }
+    
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+    
+    public int getTemperatura() {
+        return temperatura;
+    }
+    
+    public void setTemperatura(int temperatura) {
+        this.temperatura = temperatura;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
+    public void ligar() {
+        System.out.println("Geladeira ligada.");
+    }
+    
+    public void desligar() {
+        System.out.println("Geladeira desligada.");
+    }
+    
+    public void resfriar() {
+        this.temperatura = Math.max(-10, temperatura - 1);
+        System.out.println("Resfriando. Temperatura: " + temperatura + "°C");
+    }
+    
+    public void congelar() {
+        this.temperatura = -18;
+        System.out.println("Congelando. Temperatura: " + temperatura + "°C");
+    }
+    
+    @Override
+    public String toString() {
+        return "Geladeira{marca='" + marca + "', capacidade=" + capacidade + ", temperatura=" + temperatura + ", cor='" + cor + "'}";
+    }
+}
+
+class Relogio {
+    private String marca;
+    private String tipo;
+    private String cor;
+    private boolean alarme;
+    
+    public Relogio() {
+        this.alarme = false;
+    }
+    
+    public Relogio(String marca, String tipo, String cor) {
+        this.marca = marca;
+        this.tipo = tipo;
+        this.cor = cor;
+        this.alarme = false;
+    }
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public String getTipo() {
+        return tipo;
+    }
+    
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
+    public boolean isAlarme() {
+        return alarme;
+    }
+    
+    public void setAlarme(boolean alarme) {
+        this.alarme = alarme;
+    }
+    
+    public void mostrarHora() {
+        System.out.println("12:00");
+    }
+    
+    public void configurarAlarme() {
+        this.alarme = true;
+        System.out.println("Alarme configurado.");
+    }
+    
+    public void cronometrar() {
+        System.out.println("Cronômetro iniciado.");
+    }
+    
+    public void ajustarHora() {
+        System.out.println("Hora ajustada.");
+    }
+    
+    @Override
+    public String toString() {
+        return "Relogio{marca='" + marca + "', tipo='" + tipo + "', cor='" + cor + "', alarme=" + alarme + "}";
+    }
+}
+
+class Cadeira {
+    private String material;
+    private String cor;
+    private double altura;
+    private boolean rodinhas;
+    
+    public Cadeira() {
+    }
+    
+    public Cadeira(String material, String cor, double altura, boolean rodinhas) {
+        this.material = material;
+        this.cor = cor;
+        this.altura = altura;
+        this.rodinhas = rodinhas;
+    }
+    
+    public String getMaterial() {
+        return material;
+    }
+    
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+    
+    public String getCor() {
+        return cor;
+    }
+    
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+ 
